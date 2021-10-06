@@ -4,4 +4,4 @@ Collection of aircrafts for FlightGear Simulator
 
 ### Init
 
-Uses the command `repo` to initialize the repositories
+This repo uses submodules to download the aircrafts

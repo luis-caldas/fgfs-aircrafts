@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-  <remote name="origin" fetch="https://github.com/" />
-  <default revision="master" remote="origin" />
-  <project path="ec135" name="luis-caldas/ec135" remote="origin" />
-  <project path="pc-9m" name="FGMEMBERS/PC-9M" remote="origin" />
-</manifest>
