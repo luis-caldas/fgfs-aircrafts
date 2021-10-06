@@ -1,0 +1,6 @@
+[submodule "ec135"]
+	path = ec135
+	url = https://github.com/luis-caldas/ec135
+[submodule "PC-9M"]
+	path = PC-9M
+	url = https://github.com/FGMEMBERS/PC-9M
