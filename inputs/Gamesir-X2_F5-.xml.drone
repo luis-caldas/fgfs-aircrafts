@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name type="string">Gamesir-X2_F5 </name>
+  <axis>
+    <desc type="string">Rudder</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/rudder</property>
+      <factor type="double">1</factor>
+      <offset type="double">0</offset>
+      <power type="double">5</power>
+    </binding>
+  </axis>
+  <axis n="1">
+    <desc type="string">Throttle Custom</desc>
+    <binding>                       
+      <command type="string">nasal</command>
+      <script type="string">
+
+          var prop = "/controls/engines/throttle-all";
+
+          var step = -0.015;
+          var deadzone = 0.01;
+          var time = 0.01;
+          var min = -1; var max = 1;
+
+          var out = 1;
+          var nel = 2;
+
+          var loop = func(out, prev) {
+
+            if (!out) return;
+
+            var input = cmdarg().getNode("setting").getValue();
+            var value = getprop(prop);
+
+            if ((input != prev) and (prev != nel)) return;
+
+            var relative = value + (input * step);
+
+            if (relative > max) relative = max;
+            if (min > relative) relative = min;
+
+            setprop(prop, relative);
+
+            print(out, input, deadzone, value);
+            out = ((input > deadzone) or (-deadzone > input));
+
+            settimer(func { loop(out, input) }, time);
+
+          }
+
+          loop(out, nel);
+  
+      </script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </axis>
+  <axis n="2">
+    <desc type="string">Aileron</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/aileron</property>
+      <factor type="double">1</factor>
+      <offset type="double">0</offset>
+      <power type="double">5</power>
+    </binding>
+  </axis>
+  <axis n="3">
+    <desc type="string">Elevator</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/elevator</property>
+      <factor type="double">-1</factor>
+      <offset type="double">0</offset>
+      <power type="double">5</power>
+    </binding>
+  </axis>
+</PropertyList>

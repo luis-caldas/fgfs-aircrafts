@@ -9,7 +9,7 @@
       <property type="string">/controls/flight/rudder</property>
       <factor type="double">1</factor>
       <offset type="double">0</offset>
-      <power type="double">1</power>
+      <power type="double">5</power>
     </binding>
   </axis>
   <axis n="2">
@@ -19,7 +19,7 @@
       <property type="string">/controls/flight/aileron</property>
       <factor type="double">1</factor>
       <offset type="double">0</offset>
-      <power type="double">3.5</power>
+      <power type="double">5</power>
     </binding>
   </axis>
   <axis n="3">
@@ -29,14 +29,14 @@
       <property type="string">/controls/flight/elevator</property>
       <factor type="double">-1</factor>
       <offset type="double">0</offset>
-      <power type="double">3.5</power>
+      <power type="double">5</power>
     </binding>
   </axis>
   <button n="6">
     <desc type="string">Throttle Down</desc>
     <binding>
       <command type="string">nasal</command>
-      <script type="string">controls.incThrottle(-0.01, -1.0);</script>
+      <script type="string">controls.incThrottle(-0.0025, -1.0);</script>
     </binding>
     <repeatable type="double">1</repeatable>
   </button>
@@ -44,7 +44,7 @@
     <desc type="string">Throttle Up</desc>
     <binding>
       <command type="string">nasal</command>
-      <script type="string">controls.incThrottle(0.01, 1.0);</script>
+      <script type="string">controls.incThrottle(0.0025, 1.0);</script>
     </binding>
     <repeatable type="double">1</repeatable>
   </button>
