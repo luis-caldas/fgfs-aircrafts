@@ -2,8 +2,8 @@
 
 # defaults
 aircraft="ec135p2"
-airport="EICK"
-callsign="EIRW"
+airport="EIME"
+callsign="E270"
 
 # function that finds the folder in which the script executing it is located
 function get_folder() {
