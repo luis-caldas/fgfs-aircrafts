@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name type="string">Saitek Pro Flight X-56 Rhino Stick</name>
+  <axis>
+    <desc type="string">Aileron</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/aileron</property>
+      <factor type="double">1</factor>
+      <offset type="double">0</offset>
+      <power type="double">1</power>
+    </binding>
+  </axis>
+  <axis n="1">
+    <desc type="string">Elevator</desc>
+    <binding>
+      <command type="string">property-scale</command>
+      <property type="string">/controls/flight/elevator</property>
+      <factor type="double">-1</factor>
+      <offset type="double">0</offset>
+      <power type="double">1</power>
+    </binding>
+  </axis>
+  <button>
+    <desc type="string">Trigger</desc>
+    <repeatable type="string">false</repeatable>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.trigger(1);</script>
+    </binding>
+    <mod-up>
+      <binding>
+        <command type="string">nasal</command>
+        <script type="string">controls.trigger(0);</script>
+      </binding>
+    </mod-up>
+  </button>
+  <button n="1">
+    <desc type="string">Missile Reject</desc>
+    <binding>
+      <command type="string">property-adjust</command>
+      <property type="string">/controls/armament/missile-reject</property>
+      <step type="string">1</step>
+    </binding>
+  </button>
+  <button n="5">
+    <desc type="string">Pickle</desc>
+    <repeatable type="string">false</repeatable>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.applyPickle(1);</script>
+    </binding>
+    <mod-up>
+      <binding>
+        <command type="string">nasal</command>
+        <script type="string">controls.applyPickle(0);</script>
+      </binding>
+    </mod-up>
+  </button>
+  <button n="10">
+    <desc type="string">Target next</desc>
+    <binding>
+      <command type="string">property-adjust</command>
+      <property type="string">/controls/armament/target-selected</property>
+      <step type="string">1</step>
+    </binding>
+  </button>
+  <button n="11">
+    <desc type="string">Weapon next</desc>
+    <binding>
+      <command type="string">property-adjust</command>
+      <property type="string">/controls/armament/weapon-selected</property>
+      <step type="string">1</step>
+    </binding>
+  </button>
+  <button n="12">
+    <desc type="string">Weapon previous</desc>
+    <binding>
+      <command type="string">property-adjust</command>
+      <property type="string">/controls/armament/weapon-selected</property>
+      <step type="string">-1</step>
+    </binding>
+  </button>
+  <button n="13">
+    <desc type="string">Weapon previous</desc>
+    <binding>
+      <command type="string">property-adjust</command>
+      <property type="string">/controls/armament/weapon-selected</property>
+      <step type="string">-1</step>
+    </binding>
+  </button>
+</PropertyList>
