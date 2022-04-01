@@ -1,6 +1,3 @@
-[submodule "aircrafts/PC-9M"]
-	path = aircrafts/PC-9M
-	url = https://github.com/FGMEMBERS/PC-9M
 [submodule "aircrafts/ec135"]
 	path = aircrafts/ec135
 	url = https://github.com/luis-caldas/ec135
