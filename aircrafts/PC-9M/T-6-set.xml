@@ -1,0 +1,63 @@
+<PropertyList include="PC9-shared.xml">
+
+  <sim>
+    <variant-of>PC-9M</variant-of>
+
+    <!--Info -->
+
+    <description>Beechcraft T-6 Texan II</description>
+    <long-description>
+     The Beechcraft T-6 Texan II is a single-engine turboprop aircraft built by the Raytheon Aircraft Company (which became Hawker Beechcraft and later Beechcraft Defense Company, and was bought by Textron Aviation in 2014). As a trainer aircraft based on the Pilatus PC-9, the T-6 has replaced the Air Force's Cessna T-37B Tweet and the Navy's T-34C Turbo Mentor. 
+    </long-description>
+    <rating>
+      <FDM type="int">5</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">5</model>
+    </rating>
+    <tags>
+      <tag>ga</tag>
+      <tag>pilatus</tag>
+      <tag>low-wing</tag>
+      <tag>tricycle</tag>
+      <tag>retractable-gear</tag>
+      <tag>single-engine</tag>
+      <tag>turboprop</tag>
+      <tag>variable-pitch</tag>
+      <tag>trainer</tag>
+      <tag>ifr</tag>
+      <tag>1980s</tag>
+      <tag>1990s</tag>
+      <tag>2000s</tag>
+      <tag>2010s</tag>
+    </tags>
+
+    <model>
+      <!--
+       The model is dynamically loaded by setting /model/pc9m/t-6 to true
+       -->
+      <pc9m>
+       <t-6 type="bool">true</t-6>
+      </pc9m>
+    </model>
+
+    <menubar>
+      <default>
+        <menu n="100">
+          <label>T-6 Texan II</label>
+        </menu>
+      </default>
+    </menubar>
+
+    <help>
+      <title>Beechcraft T-6 Texan II</title>
+    </help>
+  </sim>
+
+  <controls>
+    <engines>
+      <active-engine type="int">0</active-engine>
+    </engines>
+  </controls>
+
+</PropertyList>

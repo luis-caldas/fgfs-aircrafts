@@ -1,0 +1,127 @@
+<PropertyList>
+
+  <!-- Controls -->
+  <model>
+    <name>Parking Brake</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/brake.xml</path>
+    <offsets>
+      <x-m>-0.02</x-m>
+      <y-m> 0.33</y-m>
+      <z-m> 0.868</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Emergency Landing Gear</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/emerg_landinggear.xml</path>
+    <offsets>
+      <x-m>-0.02</x-m>
+      <y-m>-0.33</y-m>
+      <z-m> 0.868</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Flaps Indicator</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/Flaps/Flaps.xml</path>
+    <offsets>
+      <x-m> 0.00</x-m>
+      <y-m>-0.30</y-m>
+      <z-m> 1.0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Landing Gear Indicator</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/Gear/Gear.xml</path>
+    <offsets>
+      <x-m> 0.04</x-m>
+      <y-m>-0.34</y-m>
+      <z-m> 0.73</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Air Cooling</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/Air/Air.xml</path>
+    <offsets>
+      <x-m>0.97</x-m>
+      <y-m>0.00</y-m>
+      <z-m>0.00</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Nose Wheel Steering Switch</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/NWS/NWS.xml</path>
+    <offsets>
+      <x-m>0.97</x-m>
+      <y-m>0.03</y-m>
+      <z-m>0.04</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>Speedbrake Switch</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/Speedbrake/Speedbrake.xml</path>
+    <offsets>
+      <x-m>0.97</x-m>
+      <y-m>0.03</y-m>
+      <z-m>0.04</z-m>
+    </offsets>
+  </model>
+
+<!--
+  <model>
+    <name>Warning Switches</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/Warning/Warning.xml</path>
+    <offsets>
+      <x-m>0.98</x-m>
+      <y-m>0.00</y-m>
+      <z-m>-0.010</z-m>
+    </offsets>
+  </model>
+-->
+
+  <!-- Instumentation -->
+   <model>
+    <name>Attitude Indicator</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/iSFD2/iSFD.xml</path>
+    <offsets>
+      <x-m> 0.0</x-m>
+      <y-m>-0.15</y-m>
+      <z-m>1.17</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>MFD1</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/MFD/MFD3d.xml</path>
+    <offsets>
+      <x-m> 0.0</x-m>
+      <y-m>-0.185</y-m>
+      <z-m> 1.0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>PFD1</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/PFD/PFD3d.xml</path>
+    <offsets>
+      <x-m>  0.0</x-m>
+      <y-m>  0.0</y-m>
+      <z-m>  1.0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <name>EICAS1</name>
+    <path>Aircraft/PC-9M/Models/Cockpit/Instruments/EICAS/EICAS3d.xml</path>
+    <offsets>
+      <x-m>  0.0</x-m>
+      <y-m>  0.185</y-m>
+      <z-m>  1.0</z-m>
+    </offsets>
+  </model>
+
+</PropertyList>

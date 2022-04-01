@@ -1,0 +1,360 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>PC-21.ac</path>
+ <offsets>
+  <pitch-deg>-0.0</pitch-deg>  
+  <z-m>-0.35</z-m>
+ </offsets>
+ 
+ <model>
+  <name>Propeller</name>
+  <path>Aircraft/PC-9M/Models/prop_5blade.xml</path>
+  <offsets>
+   <x-m> -3.8</x-m>
+   <z-m> 0.664</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>frontstrut</name>
+  <path>Aircraft/PC-9M/Models/strut_front-pc21.xml</path>
+  <offsets>
+   <x-m>-2.263</x-m>
+   <y-m> 0.0  </y-m>
+   <z-m> 0.239</z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>leftstrut</name>
+  <path>Aircraft/PC-9M/Models/strut_left-pc21.xml</path>
+  <offsets>
+   <x-m>-0.16 </x-m>
+   <y-m>-1.23 </y-m>
+   <z-m> 0.18 </z-m>
+  </offsets>
+ </model>
+ <model>
+  <name>rightstrut</name>
+  <path>Aircraft/PC-9M/Models/strut_right-pc21.xml</path>
+  <offsets>
+   <x-m>-0.16 </x-m>
+   <y-m> 1.23 </y-m>
+   <z-m> 0.18 </z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <name>HUD</name>
+  <usage>interior</usage>
+  <path>Aircraft/PC-21/Models/Instruments/HUD/HUD.xml</path>
+  <offsets>
+   <x-m>-1.21</x-m>
+   <y-m> 0.00</y-m>
+   <z-m> 1.285</z-m>
+  </offsets>
+ </model>
+
+ <model>
+  <usage>interior</usage>
+  <path>Aircraft/PC-9M/Models/Cockpit/Cockpit-PC21.xml</path>
+  <offsets>
+   <x-m>0.15</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.54</z-m>
+  </offsets>
+ </model>
+
+ <effect>
+  <name>Effects/pc21-reflection</name>
+  <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+  <object-name>arch</object-name>
+  <object-name>fuselage</object-name>
+  <object-name>wings</object-name>
+  <parameters>
+   <texture n="2">
+    <image>Aircraft/PC-9M/Models/Effects/pc21-normalmap.png</image>
+   </texture>
+  </parameters>
+ </effect>
+
+ <effect>
+  <name>Effects/pc9-reflection</name>
+  <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+  <object-name>cockpit</object-name>
+  <object-name>strut</object-name>
+ </effect>
+ 
+ <!-- glass effects -->
+ <effect>
+  <inherits-from>Aircraft/PC-9M/Models/Effects/glass/glass</inherits-from>
+  <object-name>canopy_inner</object-name>
+ </effect>
+
+ <effect>
+  <inherits-from>Aircraft/PC-9M/Models/Effects/glass/reflection</inherits-from>
+  <object-name>canopy_outer</object-name>
+  <object-name>lightcovers</object-name>
+  <object-name>taxilights</object-name>
+ </effect>
+
+ <animation>
+  <type>noshadow</type>
+  <object-name>canopy</object-name>
+ </animation>
+
+ <effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>canopy</object-name>
+  <object-name>lightcovers</object-name>
+  <object-name>taxilights</object-name>
+ </effect>
+
+ <!-- Animations -->
+
+ <!-- Canopy -->
+ <animation>
+  <type>rotate</type>
+  <object-name>canopy</object-name>
+  <property>surface-positions/spoilers-pos-norm</property>
+  <factor>-80.00</factor>
+  <axis>
+   <x1-m>-1.19 </x1-m>
+   <y1-m> 0.4 </y1-m>
+   <z1-m> 1.0</z1-m>
+   <x2-m> 1.21 </x2-m>
+   <y2-m> 0.4 </y2-m>
+   <z2-m> 1.29 </z2-m>
+  </axis>
+ </animation>
+
+ <!-- Aileron Right -->
+ <animation>
+  <type>rotate</type>
+  <object-name>raileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-20</factor>
+  <axis>
+   <x1-m> 0.553</x1-m>
+   <y1-m> 3.856</y1-m>
+   <z1-m> 0.386</z1-m>
+   <x2-m> 0.514</x2-m>
+   <y2-m> 2.515</y2-m>
+   <z2-m> 0.29</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Aileron Left -->
+ <animation>
+  <type>rotate</type>
+  <object-name>laileron</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>-20</factor>
+  <axis>
+   <x1-m> 0.553</x1-m>
+   <y1-m>-3.856</y1-m>
+   <z1-m> 0.386</z1-m>
+   <x2-m> 0.514</x2-m>
+   <y2-m>-2.515</y2-m>
+   <z2-m> 0.29</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Flap Right -->
+ <animation>
+  <type>rotate</type>
+  <object-name>rflap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>40</factor>
+  <axis>
+   <x1-m> 0.366</x1-m>
+   <y1-m> 0.611</y1-m>
+   <z1-m> 0.027</z1-m>
+   <x2-m> 0.447</x2-m>
+   <y2-m> 2.512</y2-m>
+   <z2-m> 0.197</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Flap Left -->
+ <animation>
+  <type>rotate</type>
+  <object-name>lflap</object-name>
+  <property>surface-positions/flap-pos-norm</property>
+  <factor>-40</factor>
+  <axis>
+   <x1-m> 0.366</x1-m>
+   <y1-m>-0.611</y1-m>
+   <z1-m> 0.027</z1-m>
+   <x2-m> 0.447</x2-m>
+   <y2-m>-2.512</y2-m>
+   <z2-m> 0.197</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Rudder -->
+ <animation>
+  <type>rotate</type>
+  <object-name>rudder</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>20</factor>
+  <axis>
+   <x1-m> 4.824</x1-m>
+   <y1-m> 0.00</y1-m>
+   <z1-m> 1.10</z1-m>
+   <x2-m> 5.175</x2-m>
+   <y2-m> 0.00</y2-m>
+   <z2-m> 2.54</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Eleveator -->
+ <animation>
+  <type>rotate</type>
+  <object-name>elevator</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <factor>20</factor>
+  <axis>
+   <x1-m> 5.53</x1-m>
+   <y1-m>-1.59</y1-m>
+   <z1-m> 0.84</z1-m>
+   <x2-m> 5.53</x2-m>
+   <y2-m> 1.59</y2-m>
+   <z2-m> 0.84</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Airbrake -->
+ <animation>
+  <type>rotate</type>
+  <object-name>airbrake</object-name>
+  <object-name>abhydro</object-name>
+  <property>surface-positions/speedbrake-pos-norm</property>
+  <factor>40.00</factor>
+  <axis>
+   <x1-m> 0.81</x1-m>
+   <y1-m>-0.15</y1-m>
+   <z1-m> 0.02</z1-m>
+   <x2-m> 0.81</x2-m>
+   <y2-m> 0.15</y2-m>
+   <z2-m> 0.02</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Front Gear -->
+ <animation>
+  <type>rotate</type>
+  <object-name>frdoor</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>92</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>92</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>-2.368</x1-m>
+   <y1-m> 0.14</y1-m>
+   <z1-m> 0.129</z1-m>
+   <x2-m>-1.069</x2-m>
+   <y2-m> 0.153</y2-m>
+   <z2-m> 0.082</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>fldoor</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>-92</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>-92</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>-2.368</x1-m>
+   <y1-m>-0.14</y1-m>
+   <z1-m> 0.129</z1-m>
+   <x2-m>-1.069</x2-m>
+   <y2-m>-0.153</y2-m>
+   <z2-m> 0.082</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Left gear -->
+ <animation>
+  <type>rotate</type>
+  <object-name>lbodoor</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>-123</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>-123</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>-0.358</x1-m>
+   <y1-m>-1.292</y1-m>
+   <z1-m> 0.115</z1-m>
+   <x2-m> 0.263</x2-m>
+   <y2-m>-1.324</y2-m>
+   <z2-m> 0.087</z2-m>
+  </axis>
+ </animation>
+
+ <!-- Right Gear -->
+ <animation>
+  <type>rotate</type>
+  <object-name>rbodoor</object-name>
+  <property>gear/gear[2]/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>123</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>123</dep>
+   </entry>
+  </interpolation>
+  <axis>
+   <x1-m>-0.358</x1-m>
+   <y1-m> 1.292</y1-m>
+   <z1-m> 0.115</z1-m>
+   <x2-m> 0.263</x2-m>
+   <y2-m> 1.324</y2-m>
+   <z2-m> 0.087</z2-m>
+  </axis>
+ </animation>
+
+</PropertyList>

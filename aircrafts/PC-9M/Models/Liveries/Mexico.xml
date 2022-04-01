@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Mexican Air Force HB-HRI</name>
+   <texture>Liveries/Mexico.png</texture>
+   <shininess type="float">-0.75</shininess>
+  </livery>
+  <livery-cockpit>
+   <texture>Cockpit/dirtmap-aquamarine.png</texture>
+  </livery-cockpit>
+  <civilian type="bool">false</civilian>
+ </model>
+</sim>
+
+</PropertyList>

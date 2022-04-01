@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <path>emerg_landinggear.ac</path>
+  <offsets>
+    <roll-deg>0</roll-deg>
+    <z-m>0.0</z-m>
+  </offsets>
+
+  <animation>
+    <type>pick</type>
+    <object-name>rod</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <interval-sec>0.2</interval-sec>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/gear/emergency-release</property>
+        <step>1</step>
+        <min>0</min>
+        <max>1</max>
+        <wrap>true</wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>rod</object-name>
+    <property>controls/gear/emergency-release</property>
+    <factor>0.007</factor>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+ 
+  <animation>
+    <type>translate</type>
+    <object-name>handle</object-name>
+    <property>controls/gear/emergency-release</property>
+    <factor>0.01</factor>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+</PropertyList>

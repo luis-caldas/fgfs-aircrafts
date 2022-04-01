@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <model>
+  <name>PC-7</name>
+  <path>Aircraft/PC-9M/Models/PC-7.xml</path>
+  <offsets>
+   <x-m> -0.3</x-m>
+   <y-m>  0.0</y-m>
+   <z-m>  0.0</z-m>
+  </offsets>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>PC-7</object-name>
+  <condition>
+   <property>/sim/model/pc9m/pc-7</property>
+  </condition>
+ </animation>
+
+ <model>
+  <name>PC-7MKX</name>
+  <path>Aircraft/PC-9M/Models/PC-7mkx.xml</path>
+  <offsets>
+   <x-m> -0.3</x-m>
+   <y-m>  0.0</y-m>
+   <z-m>  0.1</z-m>
+  </offsets>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>PC-7MKX</object-name>
+  <condition>
+   <or>
+    <property>/sim/model/pc9m/pc-7mk2</property>
+    <property>/sim/model/pc9m/pc-7mkx</property>
+   </or>
+  </condition>
+ </animation>
+
+ <model>
+  <name>PC-9M</name>
+  <path>Aircraft/PC-9M/Models/PC-9M.xml</path>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>PC-9M</object-name>
+  <condition>
+   <or>
+    <property>/sim/model/pc9m/pc-9a</property>
+    <property>/sim/model/pc9m/pc-9m</property>
+   </or>
+  </condition>
+ </animation>
+
+ <model>
+  <name>T-6</name>
+  <path>Aircraft/PC-9M/Models/T-6.xml</path>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>T-6</object-name>
+  <condition>
+   <property>/sim/model/pc9m/t-6</property>
+  </condition>
+ </animation>
+
+ <model>
+  <name>PC-21</name>
+  <path>Aircraft/PC-9M/Models/PC-21.xml</path>
+  <offsets>
+   <x-m> -0.3</x-m>
+   <y-m>  0.0</y-m>
+   <z-m>  0.0</z-m>
+  </offsets>
+ </model>
+ <animation>
+  <type>select</type>
+  <object-name>PC-21</object-name>
+  <condition>
+   <property>/sim/model/pc9m/pc-21</property>
+  </condition>
+ </animation>
+
+ <animation>
+   <type>select</type>
+   <object-name>dfin_large</object-name>
+   <condition>
+     <property>/sim/model/pc9m/pc-9m</property>
+   </condition>
+ </animation>
+ <animation>
+   <type>select</type>
+   <object-name>dfin_small</object-name>
+   <condition>
+     <or>
+       <property>/sim/model/pc9m/pc-9a</property>
+       <property>/sim/model/pc9m/t-6</property>
+     </or>
+   </condition>
+ </animation>
+ <animation>
+   <type>select</type>
+   <object-name>hstab_endpoints</object-name>
+   <condition>
+     <or>
+       <property>/sim/model/pc9m/pc-9m</property>
+       <property>/sim/model/pc9m/t-6</property>
+     </or>
+   </condition>
+ </animation>
+ 
+ <model>
+  <path>Aircraft/PC-9M/Models/Effects.xml</path>
+ </model>
+
+ <animation>
+  <type>alpha-test</type>
+  <object-name>canopy_inner</object-name>
+  <object-name>canopy_outer</object-name>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+ 
+ <!-- MP sound -->
+ <sound>
+  <path>Aircraft/PC-9M/Sounds/MP-Sound.xml</path>
+ </sound>
+
+ <!-- Lights -->
+ <model>
+  <name>NavLightsALS</name>
+  <path>Aircraft/PC-9M/Models/navlightsCombined.xml</path>
+  <offsets>
+   <x-m> -0.02</x-m>
+   <y-m>  0.0</y-m>
+   <z-m> -0.45</z-m>
+  </offsets>
+ </model>
+
+ <!-- Livery -->
+ <nasal>
+  <load>
+   var livery_update = aircraft.livery_update.new("Aircraft/PC-9M/Models/Liveries");
+  </load>
+  <unload>
+   livery_update.stop();
+  </unload>
+ </nasal>
+
+ <animation>
+  <name>undercarriage</name>
+  <object-name>frontstrut</object-name>
+  <object-name>leftstrut</object-name>
+  <object-name>rightstrut</object-name>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>farch</object-name>
+  <object-name>arch</object-name>
+  <object-name>fuselage</object-name>
+  <object-name>wings</object-name>
+  <object-name>undercarriage</object-name>
+  <property-base>sim/model/livery</property-base>
+  <texture-prop>texture</texture-prop>
+  <texture>Aircraft/PC-9M/Models/Liveries/Default.png</texture>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>spinner</object-name>
+  <property-base>sim/model/livery-spinner</property-base>
+  <texture-prop>texture</texture-prop>
+  <texture>Aircraft/PC-9M/Models/Liveries/Default.png</texture>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>archi</object-name>
+  <object-name>farchi</object-name>
+  <object-name>archo</object-name>
+  <object-name>cockpit</object-name>
+  <object-name>clockmount</object-name>
+  <object-name>clockmount</object-name>
+  <property-base>sim/model/livery-cockpit</property-base>
+  <texture-prop>texture</texture-prop>
+  <texture>Aircraft/PC-9M/Models/Cockpit/dirtmap.png</texture>
+ </animation>
+
+ <!-- Animations -->
+
+ <!-- Lighting -->
+ <animation>
+  <type>translate</type>
+  <object-name>landinglights</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <factor>-0.10</factor>
+  <axis>
+   <x>0.00</x>
+   <y>0.00</y>
+   <z>1.00</z>
+  </axis>
+ </animation>
+
+</PropertyList>

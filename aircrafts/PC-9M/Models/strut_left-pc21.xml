@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>strut_left-pc21.ac</path>
+
+ <effect>
+  <name>Effects/reflection</name>
+  <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+  <object-name>strut</object-name>
+ </effect>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>strut</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>88</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>88</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>0</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.0 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 0.0 </z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>istrut</object-name>
+  <object-name>ostrut</object-name>
+  <object-name>ustrut</object-name>
+  <property>gear/gear[1]/position-norm</property>
+  <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>-95</dep>
+   </entry>
+   <entry>
+    <ind>0.5</ind>
+    <dep>-95</dep>
+   </entry>
+   <entry>
+    <ind>1.0</ind>
+    <dep>0</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>-0.072</x-m>
+   <y-m>-0.045</y-m>
+   <z-m>-0.203</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>compressable</object-name>
+  <property>gear/gear[1]/compression-norm[0]</property>
+  <factor>40</factor>
+  <center>
+   <x-m>-0.05</x-m>
+   <y-m> 0.0 </y-m>
+   <z-m>-0.46</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

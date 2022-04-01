@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Demonstrator HB-HZB</name>
+   <texture>Liveries/PC-21/HB-HZB.png</texture>
+   <shininess type="float">-0.75</shininess>
+   <fresnel type="float">0.7</fresnel>
+  </livery>
+  <livery-cockpit>
+   <texture>Cockpit/dirtmap.png</texture>
+  </livery-cockpit>
+  <civilian type="bool">true</civilian>
+ </model>
+</sim>
+
+</PropertyList>

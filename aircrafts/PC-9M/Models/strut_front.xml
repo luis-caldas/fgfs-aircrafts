@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>strut_front.ac</path>
+
+ <effect>
+  <name>Effects/reflection</name>
+  <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+  <object-name>strut</object-name>
+ </effect>
+
+ <!-- Front Strut -->
+ <animation>
+  <type>rotate</type>
+  <object-name>strut</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>100</factor>
+  <offset-deg>-95</offset-deg>
+  <center>
+   <x1-m> 0.0</x1-m>
+   <y1-m> 0.0  </y1-m>
+   <z1-m> 0.0</z1-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>rotate</type>
+  <object-name>uhydro</object-name>
+  <object-name>dhydro</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>-120</factor>
+  <offset-deg>120</offset-deg>
+  <center>
+   <x-m> 0.069</x-m>
+   <y-m> 0.0  </y-m>
+   <z-m>-0.313</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+ <type>rotate</type>
+  <object-name>uhydro</object-name>
+  <property>gear/gear[0]/position-norm</property>
+  <factor>120</factor>
+  <offset-deg>-120</offset-deg>
+  <center>
+   <x-m> 0.310</x-m>
+   <y-m> 0.0  </y-m>
+   <z-m>-0.134</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>uscissor</object-name>
+  <object-name>dscissor</object-name>
+  <object-name>steerable</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>-20</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>uscissor</object-name>
+  <object-name>dscissor</object-name>
+  <object-name>compressable</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+  <factor>30</factor>
+  <center>
+   <x-m>-0.060</x-m>
+   <y-m> 0.0  </y-m>
+   <z-m>-0.363</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>dscissor</object-name>
+  <object-name>compressable</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+  <factor>-60</factor>
+  <center>
+   <x-m>-0.173</x-m>
+   <y-m> 0.0  </y-m>
+   <z-m>-0.462</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>compressable</object-name>
+  <property>gear/gear[0]/compression-norm</property>
+  <factor>30</factor>
+  <center>
+   <x-m>-0.069</x-m>
+   <y-m> 0.0  </y-m>
+   <z-m>-0.561</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

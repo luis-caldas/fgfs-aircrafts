@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!-- Johan G -->
+
+<PropertyList>
+
+<sim>
+ <model>
+  <livery>
+   <name type="string">Slovenian Air Force 64</name>
+   <texture>Liveries/Slovenia.png</texture>
+   <shininess type="float">-0.75</shininess>
+  </livery>
+  <livery-cockpit>
+   <texture>Cockpit/dirtmap-aquamarine.png</texture>
+  </livery-cockpit>
+  <civilian type="bool">false</civilian>
+ </model>
+</sim>
+
+</PropertyList>

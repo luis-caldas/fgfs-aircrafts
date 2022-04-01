@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <name>aircraft-dialog</name>
+  <layout>vbox</layout>
+  <resizable>false</resizable>
+  <modal>false</modal>
+  <draggable>true</draggable>
+
+  <group>
+    <layout>table</layout>
+
+    <combo>
+      <row>0</row>
+      <col>1</col>
+      <name>Model</name>
+      <pref-width>200</pref-width>
+      <property>/sim/model/pc9m/dialogs/model-type</property>
+      <value>PC-7</value>
+      <value>PC-7mk2</value>
+      <value>PC-9a</value>
+      <value>PC-9M</value>
+      <value>T-6</value>
+      <binding>
+        <command>nasal</command>
+        <script>PC9M.newModel()</script>
+      </binding>
+    </combo>
+  <group>
+
+</PropertyList>

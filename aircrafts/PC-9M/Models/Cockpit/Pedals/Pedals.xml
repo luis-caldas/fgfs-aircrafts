@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+ <PropertyList>
+
+ <path>Pedals.ac</path>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>L-Hinge</object-name>
+  <object-name>L-pedal</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-10</factor>
+  <center>
+   <x-m> 0.0 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 0.28</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>L-pedal</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>10</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>R-Hinge</object-name>
+  <object-name>R-pedal</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>10</factor>
+  <center>
+   <x-m> 0.0 </x-m>
+   <y-m> 0.0 </y-m>
+   <z-m> 0.28</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>R-pedal</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>-10</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>

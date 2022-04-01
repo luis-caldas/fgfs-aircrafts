@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>prop_5blade.ac</path>
+
+ <animation>
+  <type>alpha-test</type>
+  <object-name>pdisk</object-name>
+  <object-name>prop</object-name>
+  <alpha-factor>0.01</alpha-factor>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>propeller</object-name>
+  <texture-prop>texture</texture-prop>
+  <texture>Aircraft/PC-9M/Models/Liveries/Propeller.png</texture>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>pdisk</object-name>
+  <texture-prop>texture</texture-prop>
+  <texture>Aircraft/PC-9M/Models/Liveries/Disk.png</texture>
+ </animation>
+
+ <animation>
+  <type>material</type>
+  <object-name>prop</object-name>
+  <texture-prop>texture</texture-prop>
+  <texture>Aircraft/PC-9M/Models/Liveries/Blur.png</texture>
+ </animation>
+
+ <effect>
+  <inherits-from>Effects/model-transparent</inherits-from>
+  <object-name>prop</object-name>
+  <object-name>pdisk</object-name>
+ </effect>
+
+ <effect>
+  <name>Effects/reflection</name>
+  <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+  <object-name>spinner</object-name>
+ </effect>
+
+ <effect>
+  <name>Effects/prop-reflection</name>
+  <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
+  <object-name>propeller</object-name>
+  <parameters>
+   <reflection-correction type="float">-0.9</reflection-correction>
+  </parameters>
+ </effect>
+
+ <animation>
+  <type>blend</type>
+  <object-name>prop</object-name>
+  <property>/engines/active-engine/n1</property>
+  <factor>0.007</factor>
+  <min>0.8</min>
+  <max>1.0</max>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>prop</object-name>
+  <condition>
+   <greater-than>
+    <property>/engines/active-engine/n1</property>
+    <value>50.000</value>
+   </greater-than>
+   <less-than>
+    <property>/engines/active-engine/n1</property>
+    <value>70.0001</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>prop</object-name>
+  <object-name>spinner</object-name>
+  <property>/engines/active-engine/n1</property>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>pdisk</object-name>
+  <condition>
+   <greater-than>
+    <property>/engines/active-engine/n1</property>
+    <value>70.0000</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+  <animation>
+  <type>spin</type>
+  <object-name>pdisk</object-name>
+  <property>/engines/active-engine/n1</property>
+  <factor>.5</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>blend</type>
+  <object-name>propeller</object-name>
+  <property>/engines/active-engine/n1</property>
+  <factor>0.01</factor>
+  <min>0.5</min>
+  <max>1.0</max>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>propeller</object-name>
+  <condition>
+   <less-than>
+    <property>/engines/active-engine/n1</property>
+    <value>50.0001</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>blade1</object-name>
+  <property>/controls/engines/engine/propeller-pitch-fadec</property>
+  <offset-deg>45</offset-deg>
+  <factor>45</factor>
+  <axis>
+   <x1-m> 0.0</x1-m>
+   <y1-m> 0.0</y1-m>
+   <z1-m> 0.0</z1-m>
+   <x2-m> 0.0</x2-m>
+   <y2-m> 0.0</y2-m>
+   <z2-m> 1.0</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>blade2</object-name>
+  <property>/controls/engines/engine/propeller-pitch-fadec</property>
+  <offset-deg>45</offset-deg>
+  <factor>45</factor>
+  <axis>
+   <x1-m> 0.0</x1-m>
+   <y1-m> 0.0</y1-m>
+   <z1-m> 0.0</z1-m>
+   <x2-m> 0.0</x2-m>
+   <y2-m>-1.0</y2-m>
+   <z2-m> 0.3</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>blade3</object-name>
+  <property>/controls/engines/engine/propeller-pitch-fadec</property>
+  <offset-deg>45</offset-deg>
+  <factor>45</factor>
+  <axis>
+   <x1-m> 0.0</x1-m>
+   <y1-m> 0.0</y1-m>
+   <z1-m> 0.0</z1-m>
+   <x2-m> 0.0</x2-m>
+   <y2-m>-0.6</y2-m>
+   <z2-m>-0.9</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>blade4</object-name>   
+  <property>/controls/engines/engine/propeller-pitch-fadec</property>
+  <offset-deg>45</offset-deg>
+  <factor>45</factor>
+  <axis>
+   <x1-m> 0.0</x1-m>
+   <y1-m> 0.0</y1-m>
+   <z1-m> 0.0</z1-m>
+   <x2-m> 0.0</x2-m>
+   <y2-m> 0.6</y2-m>
+   <z2-m>-0.8</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>blade5</object-name>
+  <property>/controls/engines/engine/propeller-pitch-fadec</property>
+  <offset-deg>45</offset-deg>
+  <factor>45</factor>
+  <axis>
+   <x1-m> 0.0</x1-m>
+   <y1-m> 0.0</y1-m>
+   <z1-m> 0.0</z1-m>
+   <x2-m> 0.0</x2-m>
+   <y2-m> 1.0</y2-m>
+   <z2-m> 0.4</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>propeller</object-name>
+  <property>/engines/active-engine/n1</property>
+  <factor>3</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
