@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 URL="https://svn.code.sf.net/p/flightgear/fgaddon/trunk/Aircraft/"
-AIRCRAFTS_LIST=( "737-800" "PC-9M ")
+AIRCRAFTS_LIST=( "737-800" "PC-9M" )
 
 FOLDER="aircrafts"
 
@@ -32,5 +32,5 @@ function get_folder() {
 folder_now=$(get_folder)
 
 for each_ac in "${AIRCRAFTS_LIST[@]}"; do
-    echo snv co "${URL}${each_ac}" "${folder_now}/${FOLDER}/${each_ac}"
+    svn co "${URL}${each_ac}" "${folder_now}/${FOLDER}/${each_ac}"
 done
