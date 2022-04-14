@@ -41,7 +41,7 @@ else
 fi
 
 # run the game command
-pp_jimenezmlaa_color=8 fgfs \
+pp_jimenezmlaa_color=2 fgfs \
 	--fg-aircraft="${current_folder}/aircrafts" \
 	--aircraft="$aircraft" \
 	--airport="$airport" \
