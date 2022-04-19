@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-# defaults
-aircraft="ec135p2"
-airport="EIME"
-callsign="E270"
+FOLDER="evtojs"
 
 # function that finds the folder in which the script executing it is located
 function get_folder() {
@@ -30,26 +27,14 @@ function get_folder() {
     echo "$DIR"
 }
 
-# extract current folder
-current_folder="$(get_folder)"
+# Get our current folder
+folder_now="$(get_folder)"
 
-# auto select aircraft if none given, also print all available
-if [ -n "$1" ]; then
-	aircraft="$1"
-else
-	fgfs --fg-aircraft="$current_folder" --show-aircrafts
-fi
+# Start Stick
+bash "${folder_now}/${FOLDER}/stick.sh" &
 
-# run the game command
-pp_jimenezmlaa_color=4 FG_HOME="${current_folder}/home" fgfs \
-	--fg-aircraft="${current_folder}/aircrafts" \
-	--aircraft="$aircraft" \
-	--airport="$airport" \
-	--units-meters \
-	--time-match-local \
-	--com1="123.4" \
-	--com2="121.5" \
-	--enable-real-weather-fetch \
-	--callsign="$callsign" \
-	--multiplay=out,20,mpserver01.flightgear.org,5000 \
-	--enable-terrasync
+# Start Throttle
+bash "${folder_now}/${FOLDER}/throttle.sh" &
+
+# Wait for processes to end
+wait

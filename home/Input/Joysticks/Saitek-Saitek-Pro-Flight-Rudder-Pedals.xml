@@ -22,7 +22,7 @@
       <power type="double">1</power>
     </binding>
   </axis>
-  <axis n="3">
+  <axis n="2">
     <desc type="string">Rudder</desc>
     <binding>
       <command type="string">property-scale</command>

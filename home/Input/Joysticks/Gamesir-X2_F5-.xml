@@ -9,7 +9,7 @@
       <property type="string">/controls/flight/rudder</property>
       <factor type="double">1</factor>
       <offset type="double">0</offset>
-      <power type="double">5</power>
+      <power type="double">3</power>
     </binding>
   </axis>
   <axis n="2">
@@ -32,6 +32,23 @@
       <power type="double">5</power>
     </binding>
   </axis>
+  <axis n="6">
+    <desc type="string">Rudder Trim inc.</desc>
+    <low>
+      <binding>
+        <command type="string">nasal</command>
+        <script type="string">controls.rudderTrim(-1);</script>
+      </binding>
+      <repeatable type="bool">true</repeatable>
+    </low>
+    <high>
+      <binding>
+        <command type="string">nasal</command>
+        <script type="string">controls.rudderTrim(1);</script>
+      </binding>
+      <repeatable type="bool">true</repeatable>
+    </high>
+  </axis>
   <button n="6">
     <desc type="string">Throttle Down</desc>
     <binding>
@@ -47,5 +64,19 @@
       <script type="string">controls.incThrottle(0.01, 1.0);</script>
     </binding>
     <repeatable type="double">1</repeatable>
+  </button>
+  <button n="10">
+    <desc type="string">FGCom PTT</desc>
+    <repeatable type="string">false</repeatable>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.ptt(1);</script>
+    </binding>
+    <mod-up>
+      <binding>
+        <command type="string">nasal</command>
+        <script type="string">controls.ptt(0);</script>
+      </binding>
+    </mod-up>
   </button>
 </PropertyList>

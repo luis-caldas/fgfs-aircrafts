@@ -1,0 +1,13 @@
+[evdev-absmap]
+
+ABS_X = x1
+ABS_Y = y1
+
+ABS_RZ = rt
+
+ABS_RX = x2
+ABS_RY = y2
+
+[axismap]
+-Y1 = Y1
+-Y2 = Y2

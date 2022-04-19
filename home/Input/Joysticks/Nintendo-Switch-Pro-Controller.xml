@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <name type="string">Nintendo Switch Pro Controller</name>
+  <button n="5">
+    <desc type="string">Throttle Down</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.incThrottle(-0.01, -1.0);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+  <button n="7">
+    <desc type="string">Throttle Up</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">controls.incThrottle(0.01, 1.0);</script>
+    </binding>
+    <repeatable type="double">1</repeatable>
+  </button>
+</PropertyList>
