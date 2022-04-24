@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-URL="https://svn.code.sf.net/p/flightgear/fgaddon/trunk/Aircraft/"
+AIRCRAFTS_URL="https://svn.code.sf.net/p/flightgear/fgaddon/trunk/Aircraft/"
 AIRCRAFTS_LIST=( "737-800" "PC-9M" )
+ADDONS_URL="https://svn.code.sf.net/p/flightgear/fgaddon/trunk/Addons/"
+ADDONS_LIST=( "Headtracker" )
 
-FOLDER="aircrafts"
+AIRCRAFTS_FOLDER="aircrafts"
+ADDONS_FOLDER="addons"
 
 function get_folder() {
 
@@ -29,8 +32,15 @@ function get_folder() {
     echo "$DIR"
 }
 
+# Get current folder
 folder_now=$(get_folder)
 
+# Clone aircrafts
 for each_ac in "${AIRCRAFTS_LIST[@]}"; do
-    svn co "${URL}${each_ac}" "${folder_now}/${FOLDER}/${each_ac}"
+    svn co "${AIRCRAFTS_URL}${each_ac}" "${folder_now}/${AIRCRAFTS_FOLDER}/${each_ac}"
+done
+
+# Clone addons
+for each_ad in "${ADDONS_LIST[@]}"; do
+    svn co "${ADDONS_URL}${each_ad}" "${folder_now}/${ADDONS_FOLDER}/${each_ad}"
 done
