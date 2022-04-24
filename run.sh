@@ -51,5 +51,7 @@ pp_jimenezmlaa_color=4 FG_HOME="${current_folder}/home" fgfs \
 	--com2="121.5" \
 	--enable-real-weather-fetch \
 	--callsign="$callsign" \
+	--addon="${current_folder}/headtracker" \
+	--generic=socket,in,25,127.0.0.1,5542,udp,opentrack \
 	--multiplay=out,20,mpserver01.flightgear.org,5000 \
 	--enable-terrasync

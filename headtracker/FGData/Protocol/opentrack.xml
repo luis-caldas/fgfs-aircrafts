@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<!-- Opentrack binary protocol. -->
+<PropertyList>
+  <generic>
+    <input>
+      <binary_mode>true</binary_mode>
+      <byte_order>host</byte_order>
+
+      <chunk>
+        <node>/sim/headtracker/x-m</node>
+        <type>double</type>
+      </chunk>
+      <chunk>
+        <node>/sim/headtracker/y-m</node>
+        <type>double</type>
+      </chunk>
+      <chunk>
+        <node>/sim/headtracker/z-m</node>
+        <type>double</type>
+      </chunk>
+
+      <chunk>
+        <node>/sim/headtracker/heading-deg</node>
+        <type>double</type>
+      </chunk>
+      <chunk>
+        <node>/sim/headtracker/pitch-deg</node>
+        <type>double</type>
+      </chunk>
+      <chunk>
+        <node>/sim/headtracker/roll-deg</node>
+        <type>double</type>
+      </chunk>
+
+      <chunk>
+        <node>/sim/headtracker/status</node>
+        <type>int</type>
+      </chunk>
+    </input>
+  </generic>
+</PropertyList>
