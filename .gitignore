@@ -3,5 +3,7 @@
 !.gitmodules
 aircrafts/*
 !aircrafts/ec135
+addons/*
+!addons/file
 home/*
 !home/Input
