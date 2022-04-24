@@ -104,4 +104,72 @@
       </binding>
     </mod-up>
   </button>
+  <button n="14">
+    <desc>Landing Lights</desc>
+    <binding>
+      <command>nasal</command>
+      <script>controls.toggleLandingLights();</script>
+    </binding>
+  </button>
+  <button n="15">
+    <desc>Nose Steering</desc>
+    <binding>
+      <command>property-assign</command>
+      <property>controls/gear/nose-wheel-steering</property>
+      <value>1</value>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/gear/nose-wheel-steering</property>
+        <value>0</value>
+      </binding>
+    </mod-up>
+  </button>
+  <button n="16">
+    <desc type="string">Head Track</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/sim/headtracker/config/enable</property>
+      <value>0</value>
+      <value>1</value>
+    </binding>
+    <repeatable type="string">false</repeatable>
+  </button>
+  <button n="17">
+    <desc type="string">SBS</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">setprop("/sim/rendering/osg-displaysettings/stereo-mode", "HORIZONTAL_SPLIT");</script>
+    </binding>
+    <repeatable type="string">false</repeatable>
+  </button>
+  <button n="18">
+    <desc type="string">Stereo Reset</desc>
+    <binding>
+      <command type="string">nasal</command>
+      <script type="string">setprop("/sim/rendering/osg-displaysettings/stereo-mode", "OFF");</script>
+    </binding>
+    <repeatable type="string">false</repeatable>
+  </button>
+  <!--<button n="19">
+    <desc>Toggle canopy</desc>
+    <binding>
+      <command>property-toggle</command>
+      <property>/controls/flight/spoilers</property>
+    </binding>
+  </button>
+  <button n="20">
+    <desc>Start Engine</desc>
+    <binding>
+      <command>nasal</command>
+      <script>controls.startEngine(1)</script>
+    </binding>
+    <mod-up>
+      <binding>
+        <command>nasal</command>
+        <script>controls.startEngine(0)</script>
+      </binding>
+    </mod-up>
+  </button>-->
 </PropertyList>

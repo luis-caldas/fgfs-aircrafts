@@ -6,6 +6,14 @@ ABS_Y = y1
 ABS_RX = x2
 ABS_RY = y2
 
+[evdev-keymap]
+
+BTN_DEAD = A
+
+[ui-buttonmap]
+
+A = KEY_J
+
 [axismap]
 -Y1 = Y1
 -Y2 = Y2
