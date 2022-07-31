@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 AIRCRAFTS_URL="https://svn.code.sf.net/p/flightgear/fgaddon/trunk/Aircraft/"
-AIRCRAFTS_LIST=( "737-800" "PC-9M" "PC-12" )
+AIRCRAFTS_LIST=( "737-800" "PC-9M" "PC-12" "dhc6" )
 ADDONS_URL="https://svn.code.sf.net/p/flightgear/fgaddon/trunk/Addons/"
 ADDONS_LIST=( "Headtracker" )
 
