@@ -1,3 +1,6 @@
 [submodule "aircrafts/ec135"]
 	path = aircrafts/ec135
 	url = https://github.com/luis-caldas/ec135
+[submodule "aircrafts/aw139"]
+	path = aircrafts/aw139
+	url = https://github.com/luis-caldas/aw139

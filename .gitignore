@@ -3,6 +3,7 @@
 !.gitmodules
 aircrafts/*
 !aircrafts/ec135
+!aircrafts/aw139
 addons/*
 !addons/file
 home/*
