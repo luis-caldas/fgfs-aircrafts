@@ -62,6 +62,7 @@ pp_jimenezmlaa_color=8 \
 OSG_SPLIT_STEREO_AUTO_ADJUST_ASPECT_RATIO=ON \
 FG_HOME="${current_folder}/home" \
 fgfs \
+	--data="${current_folder}/data" \
 	--fg-aircraft="${current_folder}/aircrafts" \
 	--aircraft="$aircraft" \
 	--airport="$airport_out" \
